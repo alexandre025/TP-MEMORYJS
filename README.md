@@ -23,3 +23,10 @@ $( document ).ready(function() {
 - Lorsque l'on clique sur une carte, retourner la en ajoutant la class `show` à la div `card` sur laquelle on a cliqué. Pour celà il faut utiliser la fonction `addClass`.
 - Lorsque l'on clique à nouveau sur cette carte, elle retrouve sa position initiale. Pour celà utiliser `hasClass` et `removeClass`.
 - Refactoriser votre code avec `toggleClass`.
+
+# Step 3
+
+- Pour comparer les cartes en fonction de leur valeur il faut stocker cette valeur quelque part. Utiliser des data attributes pour stocker les valeurs des cartes. Les valeurs des cartes seront des entiers (1, 2, 3...). Le but du jeu étant de trouver les paires de carte, deux cartes identiques doivent avoir la même valeur.
+- https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Utiliser_attributs_donnes
+- Stocker les valeur des cartes sur l'élément HTML `card` avec un data attribute `data-value="..."`.
+- Utiliser `$` et et la fonction `data` de JQuery pour lire ces valeurs et les afficher en console avec `console.log`.
