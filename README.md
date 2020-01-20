@@ -22,4 +22,4 @@ $( document ).ready(function() {
 - Utiliser la fonction `on` de JQuery et l'évènement `click` pour déclancher une action lorsque l'on clique sur une carte. 
 - Lorsque l'on clique sur une carte, retourner la en ajoutant la class `show` à la div `card` sur laquelle on a cliqué. Pour celà il faut utiliser la fonction `addClass`.
 - Lorsque l'on clique à nouveau sur cette carte, elle retrouve sa position initiale. Pour celà utiliser `hasClass` et `removeClass`.
-- Refactoriser votre code avec `togggleClass`.
+- Refactoriser votre code avec `toggleClass`.
