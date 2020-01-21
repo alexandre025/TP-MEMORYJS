@@ -1,7 +1,7 @@
 # MM1 2020 TP JS 1
 
-Le but de ce TP est de découvrir la programmation évenementielle avec Javascript et JQuery en réalisant un "Memory".
-Ce repository contient la base du projet projet que vous pouvez télécharger, forker ou clone.
+Le but de ce TP est de découvrir la programmation événementielle avec Javascript et JQuery en réalisant un "Memory".
+Ce « repository » (dépôt) contient la base du projet projet que vous pouvez télécharger, forker ou cloner.
 
 # Step 1
 
@@ -18,15 +18,15 @@ $( document ).ready(function() {
 
 # Step 2
 
-- Jouer avec le selecteur de Jquery `$`. Selectionner les cartes et logger le resultat en console avec `console.log`.
-- Utiliser la fonction `on` de JQuery et l'évènement `click` pour déclancher une action lorsque l'on clique sur une carte. 
-- Lorsque l'on clique sur une carte, retourner la en ajoutant la class `show` à la div `card` sur laquelle on a cliqué. Pour celà il faut utiliser la fonction `addClass`.
-- Lorsque l'on clique à nouveau sur cette carte, elle retrouve sa position initiale. Pour celà utiliser `hasClass` et `removeClass`.
-- Refactoriser votre code avec `toggleClass`.
+- Jouez avec le sélecteur de JQuery `$`. Sélectionnez les cartes et loggez le résultat en console avec `console.log`.
+- Utilisez la fonction `on` de JQuery et l'évènement `click` pour déclencher une action lorsque l'on clique sur une carte. 
+- Lorsque l'on clique sur une carte, retournez-la en ajoutant la class `show` à la div `card` sur laquelle on a cliqué. Pour cela il faut utiliser la fonction `addClass`.
+- Lorsque l'on clique à nouveau sur cette carte, elle retrouve sa position initiale. Pour cela, utilisez `hasClass` et `removeClass`.
+- Refactorisez votre code avec `toggleClass`.
 
 # Step 3
 
-- Pour comparer les cartes en fonction de leur valeur il faut stocker cette valeur quelque part. Utiliser des data attributes pour stocker les valeurs des cartes. Les valeurs des cartes seront des entiers (1, 2, 3...). Le but du jeu étant de trouver les paires de carte, deux cartes identiques doivent avoir la même valeur.
+- Pour comparer les cartes en fonction de leur valeur il faut stocker cette valeur quelque part. Utilisez des data attributes pour stocker les valeurs des cartes. Les valeurs des cartes seront des entiers (1, 2, 3...). Le but du jeu étant de trouver les paires de cartes, deux cartes identiques doivent avoir la même valeur.
 - https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Utiliser_attributs_donnes
-- Stocker les valeur des cartes sur l'élément HTML `card` avec un data attribute `data-value="..."`.
-- Utiliser `$` et et la fonction `data` de JQuery pour lire ces valeurs et les afficher en console avec `console.log`.
+- Stockez les valeurs des cartes sur l'élément HTML `card` avec un data attribute `data-value="..."`.
+- Utilisez `$` et et la fonction `data` de JQuery pour lire ces valeurs et les afficher en console avec `console.log`.
