@@ -30,3 +30,19 @@ $( document ).ready(function() {
 - https://developer.mozilla.org/fr/docs/Apprendre/HTML/Comment/Utiliser_attributs_donnes
 - Stockez les valeurs des cartes sur l'élément HTML `card` avec un data attribute `data-value="..."`.
 - Utilisez `$` et et la fonction `data` de JQuery pour lire ces valeurs et les afficher en console avec `console.log`.
+
+# Step 4
+
+- Lorsque l'utilisateur clique sur deux cartes identiques, les laisser retournées.
+- Lorsque l'utilisateur clique sur deux cartes différentes, les remettre dans leur position initiale au bout de quelques secondes avec la fonction `setTimeout`.
+
+# Step 5
+
+- Régler les différents problèmes qui se posent si :
+  - L'utilisateur clique deux fois sur la même carte ou sur une carte déjà retournée.
+  - L'utilisateur clique sur une autre carte pendant le temps d'attente imposé par `setTimeout`.
+Pour cela, utiliser `hasClass` et/ou `unbind`. Vous pouvez également refactoriser votre code pour éviter les répétitions en utilisant des fonctions. 
+
+# Step 6
+
+- Compter et afficher en dessous du plateau le nombre de paires à trouver restantes. 
