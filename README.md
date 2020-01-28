@@ -1,4 +1,4 @@
-# MM1 2020 TP JS 1 & 2
+# MM1 2020 TD JS 1 & 2 & 3
 
 Le but de ce TP est de découvrir la programmation événementielle avec Javascript et JQuery en réalisant un "Memory".
 Ce « repository » (dépôt) contient la base du projet projet que vous pouvez télécharger, forker ou cloner.
@@ -41,8 +41,8 @@ $( document ).ready(function() {
 - Régler les différents problèmes qui se posent si :
   - L'utilisateur clique deux fois sur la même carte ou sur une carte déjà retournée.
   - L'utilisateur clique sur une autre carte pendant le temps d'attente imposé par `setTimeout`.
-Pour cela, utiliser `hasClass` et/ou `unbind`. Vous pouvez également refactoriser votre code pour éviter les répétitions en utilisant des fonctions. 
+Pour cela, utiliser `hasClass` et/ou `unbind`. Vous pouvez également refactoriser votre code pour éviter les répétitions en utilisant des fonctions.
 
 # Step 6
 
-- Compter et afficher en dessous du plateau le nombre de paires à trouver restantes. 
+- Compter et afficher en dessous du plateau le nombre de paires à trouver restantes.
