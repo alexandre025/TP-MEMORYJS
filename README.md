@@ -1,4 +1,4 @@
-# MM1 2020 TP JS 1
+# MM1 2020 TP JS 1 & 2
 
 Le but de ce TP est de découvrir la programmation événementielle avec Javascript et JQuery en réalisant un "Memory".
 Ce « repository » (dépôt) contient la base du projet projet que vous pouvez télécharger, forker ou cloner.
@@ -7,7 +7,7 @@ Ce « repository » (dépôt) contient la base du projet projet que vous pouvez 
 
 - Créer un fichier `assets/app.js` et utiliser la balise `script` pour le lier au fichier `index.html`.
 - Ajouter `"use strict";` en tête de ce fichier.
-- Implémenter la fonction `ready` de JQuery : 
+- Implémenter la fonction `ready` de JQuery :
 ```js
 $( document ).ready(function() {
   console.log("Hello there!");
@@ -19,7 +19,7 @@ $( document ).ready(function() {
 # Step 2
 
 - Jouez avec le sélecteur de JQuery `$`. Sélectionnez les cartes et loggez le résultat en console avec `console.log`.
-- Utilisez la fonction `on` de JQuery et l'évènement `click` pour déclencher une action lorsque l'on clique sur une carte. 
+- Utilisez la fonction `on` de JQuery et l'évènement `click` pour déclencher une action lorsque l'on clique sur une carte.
 - Lorsque l'on clique sur une carte, retournez-la en ajoutant la class `show` à la div `card` sur laquelle on a cliqué. Pour cela il faut utiliser la fonction `addClass`.
 - Lorsque l'on clique à nouveau sur cette carte, elle retrouve sa position initiale. Pour cela, utilisez `hasClass` et `removeClass`.
 - Refactorisez votre code avec `toggleClass`.
