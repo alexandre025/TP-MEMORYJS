@@ -9,32 +9,53 @@ $(document).ready(function() {
   var previousCard = null;
 
   // Set the event "click" on each card
-  cards.on("click", function() {
-    // previousCard is assigned to the "previous currentCard"
-    // When the user is clicking for the first time, currentCard equals null so previousCard is logically null
-    previousCard = currentCard;
+  cards.on("click", setClickEvent);
 
-    // currentCard is the card we clicked on
-    currentCard = $(this);
+  function setClickEvent() {
+    if (!$(this).hasClass("show")) {
+      // previousCard is assigned to the "previous currentCard"
+      // When the user is clicking for the first time, currentCard equals null so previousCard is logically null
+      previousCard = currentCard;
 
-    // Show the card we clicked on
-    currentCard.addClass("show");
+      // currentCard is the card we clicked on
+      currentCard = $(this);
 
-    console.log("Previous card:");
-    console.log(previousCard);
-    console.log("Current card:");
-    console.log(currentCard);
+      // Show the card we clicked on
+      currentCard.addClass("show");
 
-    if (previousCard != null) {
-      // User clicked on a second card
-      if (currentCard.data("value") != previousCard.data("value")) {
-        // previousCard equals currentCard
-        currentCard.removeClass("show");
-        previousCard.removeClass("show");
+      console.log("Previous card:");
+      console.log(previousCard);
+      console.log("Current card:");
+      console.log(currentCard);
+
+      if (previousCard != null) {
+        // User clicked on a second card
+
+        if (currentCard.data("value") != previousCard.data("value")) {
+          // previousCard equals currentCard
+
+          // Prevent user from clicking during the 3000ms timeout
+          cards.unbind("click");
+
+          setTimeout(function() {
+            currentCard.removeClass("show");
+            previousCard.removeClass("show");
+
+            resetCards();
+
+            // Allow user to click by re-binding the click event on our cards
+            cards.on("click", setClickEvent);
+          }, 3000);
+        } else {
+          resetCards();
+        }
       }
-    } else {
-      // Do nothing
-      // User clicked on one card for now
     }
-  });
+  }
+
+  function resetCards() {
+    currentCard = null;
+    previousCard = null;
+    console.log("Reset cards");
+  }
 });
