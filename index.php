@@ -1,25 +1,41 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Memory JS</title>
-    <link rel="stylesheet" href="assets/app.css">
-    <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
-    <script src="assets/app.js"></script>
-  </head>
-  <body>
-    <div id="board">
-      <?php
-        $cards = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9];
-        shuffle($cards);
+<?php include('views/head.php'); ?>
 
-        for($i = 0; $i < count($cards); $i++) {
-          echo "<div class='card js_click_on_card' data-value='" . $cards[$i] . "'>";
-          echo "<img src='assets/img/cards/" . $cards[$i] . ".png' class='card--front'>";
-          echo "<img src='assets/img/cards/back.png' class='card--back'>";
-          echo "</div>";
-        }
-      ?>
+  <body>
+  <div class="container">
+    <h1>Welcome to MEMORYJS!</h1>
+    <div class="row">
+        <div class="col-xs-6 col-md-6 col-lg-6">
+
+        <form action="game.php" method="post">
+                <div class="form-group">
+                    <label for="number_of_pairs">Number of pairs</label>
+
+
+                    <?php if (isset($_GET['error'])): ?>
+
+                        <input type="text" name="number_of_pairs" class="form-control is-invalid">
+                        <div class="invalid-feedback">
+                            <?php echo $_GET['error']; ?>
+                        </div>
+
+
+                    <?php else: ?>
+
+                        <input type="text" name="number_of_pairs" class="form-control">
+
+                    <?php endif; ?>
+
+
+
+                    <small class="form-text text-muted">Select a value between 2 to 9 included.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Play</button>
+            </form>
+
+        </div>
     </div>
+</div>
   </body>
 </html>
